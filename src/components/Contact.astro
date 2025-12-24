@@ -5,79 +5,33 @@
     <div class="absolute top-0 left-0 w-64 h-64 bg-fairfield-blue-50 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl opacity-50"></div>
 
     <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-12">
-            <span class="text-fairfield-blue-600 font-semibold tracking-wide uppercase text-sm">Get in Touch</span>
-            <h2 class="font-serif text-3xl md:text-4xl font-bold text-fairfield-blue-950 mt-2">Ready for a Sleepover?</h2>
-            <div class="mt-4">
-                <a href="mailto:cesar@cesardogcare.com" class="text-fairfield-blue-600 font-semibold hover:text-fairfield-blue-800 transition-colors">
-                    cesar@cesardogcare.com
+        <div class="text-center max-w-2xl mx-auto bg-white p-12 md:p-16 rounded-[2rem] shadow-2xl border border-fairfield-blue-50 relative">
+            <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-fairfield-blue-600 rounded-full flex items-center justify-center shadow-xl">
+                <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+            </div>
+            
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-fairfield-blue-950 mb-8 mt-4">Let's Talk Pups</h2>
+            <p class="text-xl text-fairfield-sand-600 mb-12 leading-relaxed">
+                Ready to book your dog’s stay or have a few questions? Reach out directly—I’m usually playing with a pup, but I’ll get back to you quickly!
+            </p>
+
+            <div class="space-y-8">
+                <a href="tel:4753398756" class="group flex flex-col items-center p-6 rounded-2xl hover:bg-fairfield-blue-50 transition-all duration-300 border border-transparent hover:border-fairfield-blue-100">
+                    <span class="text-fairfield-sand-500 text-sm uppercase tracking-widest mb-1 italic">Call or Text</span>
+                    <span class="text-3xl md:text-4xl font-serif font-bold text-fairfield-blue-900 group-hover:text-fairfield-blue-600 transition-colors">(475) 339-8756</span>
+                </a>
+
+                <div class="w-16 h-px bg-fairfield-blue-100 mx-auto"></div>
+
+                <a href="mailto:cesar@cesardogcare.com" class="group flex flex-col items-center p-6 rounded-2xl hover:bg-fairfield-blue-50 transition-all duration-300 border border-transparent hover:border-fairfield-blue-100">
+                    <span class="text-fairfield-sand-500 text-sm uppercase tracking-widest mb-1 italic">Email</span>
+                    <span class="text-2xl md:text-3xl font-serif font-bold text-fairfield-blue-900 group-hover:text-fairfield-blue-600 transition-colors">cesar@cesardogcare.com</span>
                 </a>
             </div>
+
+            <div class="mt-16 text-fairfield-sand-400 text-sm">
+                <p>Located in the heart of Fairfield, CT</p>
+            </div>
         </div>
-
-        <div id="form-container">
-            <form id="contact-form" class="space-y-6 bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-fairfield-sand-100">
-                <div>
-                    <label for="name" class="block text-sm font-medium text-fairfield-sand-700 mb-1">Your Name</label>
-                    <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-xl bg-warm-white border border-fairfield-sand-200 focus:border-fairfield-blue-400 focus:ring-2 focus:ring-fairfield-blue-100 outline-none transition-all" required placeholder="John Doe">
-                </div>
-                
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
-                        <label for="dog-name" class="block text-sm font-medium text-fairfield-sand-700 mb-1">Dog's Name</label>
-                        <input type="text" id="dog-name" name="dog_name" class="w-full px-4 py-3 rounded-xl bg-warm-white border border-fairfield-sand-200 focus:border-fairfield-blue-400 focus:ring-2 focus:ring-fairfield-blue-100 outline-none transition-all" required placeholder="Buddy">
-                    </div>
-                    <div>
-                        <label for="dates" class="block text-sm font-medium text-fairfield-sand-700 mb-1">Requested Dates</label>
-                        <input type="text" id="dates" name="dates" class="w-full px-4 py-3 rounded-xl bg-warm-white border border-fairfield-sand-200 focus:border-fairfield-blue-400 focus:ring-2 focus:ring-fairfield-blue-100 outline-none transition-all" placeholder="Oct 12 - Oct 15">
-                    </div>
-                </div>
-
-                <div>
-                    <label for="message" class="block text-sm font-medium text-fairfield-sand-700 mb-1">Tell me about your pup</label>
-                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-xl bg-warm-white border border-fairfield-sand-200 focus:border-fairfield-blue-400 focus:ring-2 focus:ring-fairfield-blue-100 outline-none transition-all" placeholder="Breed, age, temperament..."></textarea>
-                </div>
-
-                <button type="submit" class="w-full py-4 px-6 rounded-full bg-fairfield-blue-600 text-white font-bold text-lg hover:bg-fairfield-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                    Send Message to Cesar
-                </button>
-            </form>
-            
-            <p id="form-success" class="hidden mt-6 text-center text-green-600 font-medium bg-green-50 py-3 px-6 rounded-xl border border-green-100 animate-fade-in-up">
-                Thanks! I'll get back to you shortly.
-            </p>
-        </div>
-    </div>
-</section>
-
-<script>
-    import { actions } from 'astro:actions';
-
-    const form = document.getElementById('contact-form') as HTMLFormElement;
-    const successMsg = document.getElementById('form-success');
-    const submitBtn = form?.querySelector('button');
-
-    if (form && successMsg && submitBtn) {
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const originalBtnText = submitBtn.innerText;
-            submitBtn.innerText = 'Sending...';
-            submitBtn.disabled = true;
-
-            const formData = new FormData(form);
-            const { error } = await actions.sendContact(formData);
-
-            if (!error) {
-                form.reset();
-                successMsg.classList.remove('hidden');
-                setTimeout(() => successMsg.classList.add('hidden'), 5000);
-            } else {
-                alert('Oops! Something went wrong. Please try again.');
-            }
-
-            submitBtn.innerText = originalBtnText;
-            submitBtn.disabled = false;
-        });
-    }
-</script>
