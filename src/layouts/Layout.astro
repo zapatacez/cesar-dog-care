@@ -1,0 +1,58 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Cesar Dog Care - Boutique dog boarding in Fairfield, CT. One guest at a time for personalized care." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+	</head>
+	<body class="font-sans antialiased text-stone-700 bg-[#F9F8F6]">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--sage-50: #f4f7f2;
+		--sage-100: #e3ebe0;
+		--sage-200: #c5d6bf;
+		--sage-300: #9eb895;
+		--sage-400: #8A9A5B;
+		--sage-500: #6d7f45;
+		--sage-600: #546336;
+		--sage-700: #44502d;
+		--stone-50: #fafaf9;
+		--stone-100: #f5f5f4;
+		--stone-200: #e7e5e4;
+		--stone-300: #d6d3d1;
+		--stone-400: #a8a29e;
+		--stone-500: #78716c;
+		--stone-600: #57534e;
+		--stone-700: #44403c;
+		--stone-800: #292524;
+		--stone-900: #1c1917;
+		--warm-white: #F9F8F6;
+		--warm-beige: #E8E6E1;
+	}
+
+	body {
+		background-color: var(--warm-white);
+		color: var(--stone-700);
+	}
+</style>

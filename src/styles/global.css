@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@config "../../tailwind.config.mjs";
+
+@layer base {
+  :root {
+    --sage-50: #f4f7f2;
+    --sage-100: #e3ebe0;
+    --sage-200: #c5d6bf;
+    --sage-300: #9eb895;
+    --sage-400: #8A9A5B;
+    --sage-500: #6d7f45;
+    --sage-600: #546336;
+    --sage-700: #44502d;
+  }
+}

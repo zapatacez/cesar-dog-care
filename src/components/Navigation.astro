@@ -1,0 +1,51 @@
+---
+---
+<nav class="fixed w-full z-50 bg-[#F9F8F6]/90 backdrop-blur-sm border-b border-stone-200 transition-all duration-300" id="navbar">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <div class="flex-shrink-0 flex items-center">
+                <a href="#" class="font-serif text-2xl font-bold text-sage-600 tracking-tight">Cesar Dog Care</a>
+            </div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-stone-600 hover:text-sage-600 font-medium transition-colors">About</a>
+                <a href="#services" class="text-stone-600 hover:text-sage-600 font-medium transition-colors">Services</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-full bg-sage-400 text-white font-medium hover:bg-sage-500 transition-colors shadow-sm hover:shadow-md">Book a Stay</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-stone-600 hover:text-sage-600 focus:outline-none p-2">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#F9F8F6] border-t border-stone-100">
+        <div class="px-4 pt-2 pb-6 space-y-1 sm:px-3 text-center">
+            <a href="#about" class="block py-3 text-stone-600 hover:text-sage-600 font-medium text-lg">About</a>
+            <a href="#services" class="block py-3 text-stone-600 hover:text-sage-600 font-medium text-lg">Services</a>
+            <a href="#contact" class="block py-3 mt-2 text-sage-600 font-bold text-lg">Book a Stay</a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    if (btn && menu) {
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking a link
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    }
+</script>
